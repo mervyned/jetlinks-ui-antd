@@ -10,7 +10,14 @@ const subs = {};
 let timer: any = {};
 const initWebSocket = () => {
     clearInterval(timer);
-    const wsUrl = `${document.location.protocol.replace('http', 'ws')}//${document.location.host}/jetlinks-edge/messaging/${getAccessToken()}?:X_Access_Token=${getAccessToken()}`;
+    const wsUrl = `${process.env.prefix
+        .replace('https://', 'wss://')
+        .replace(
+          'http://',
+          'ws://',
+        )}/jetlinks-edge/messaging/${getAccessToken()}?:X_Access_Token=${getAccessToken()}`;
+        debugger
+
     if (!ws && count < 5) {
         try {
             count += 1;

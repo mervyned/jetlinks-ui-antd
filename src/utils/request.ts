@@ -148,6 +148,7 @@ const errorHandler = (error: { response: Response }): Response | undefined => {
  * 配置request请求时的默认参数
  */
 const request = extend({
+  prefix: process.env.prefix, // api base_url
   errorHandler, // 默认错误处理
   credentials: 'include', // 默认请求是否带上cookie
 });
