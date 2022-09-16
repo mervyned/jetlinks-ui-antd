@@ -5,7 +5,7 @@
  * For details, please see
  * https://pro.ant.design/docs/deploy
  */
- export default {
+export default {
   dev: {
     '/jetlinks': {
       // target: 'http://192.168.33.222:8844/',
@@ -16,8 +16,8 @@
       // target: 'http://test.jetlinks.cn/jetlinks',
       // target: 'http://192.168.32.8:8844/',
       // ws: 'ws://192.168.32.8:8848/',
-      ws: 'ws://demo.jetlinks.cn/jetlinks',
-      target: 'http://demo.jetlinks.cn/jetlinks',
+      target: 'http://localhost:8848/',
+      ws: 'ws://localhost:8848/',
       changeOrigin: true,
       pathRewrite: { '^/jetlinks': '' },
     },
